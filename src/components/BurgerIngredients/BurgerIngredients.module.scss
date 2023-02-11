@@ -1,0 +1,25 @@
+.ingridients {
+  display: flex;
+  flex-direction: column;
+  width: 42%;
+  height: 100%;
+  margin-top: 40px;
+}
+
+.blocks {
+  height: 100%;
+  overflow-y: auto;
+  min-height: fit-content;
+
+  &::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: #2f2f37;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: #8585ad;
+  }
+}
