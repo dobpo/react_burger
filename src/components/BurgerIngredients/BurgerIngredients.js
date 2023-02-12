@@ -1,6 +1,6 @@
 import { useState } from 'react';
-
 import { Tab } from '@ya.praktikum/react-developer-burger-ui-components';
+
 import IngredientsBlock from './IngredientsBlock/IngredientsBlock';
 
 import styles from './BurgerIngredients.module.scss';

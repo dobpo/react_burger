@@ -1,11 +1,10 @@
 import { useState, useEffect } from 'react';
 
-import styles from './App.module.scss';
-
 import AppHeader from '../AppHeader/AppHeader';
 import BurgerIngredients from '../BurgerIngredients/BurgerIngredients';
 import BurgerConstructor from '../BurgerConstructor/BurgerConstructor';
 
+import styles from './App.module.scss';
 
 const DATA_API_URL = 'https://norma.nomoreparties.space/api';
 
@@ -32,7 +31,6 @@ function App() {
   return (
     <div className={styles.app}>
       <AppHeader />
-
       {data.length ?
           (
             <main className={styles.main}>
@@ -48,7 +46,6 @@ function App() {
             }}>Произошла ошибка при получении данных: {error}</p>
           )
         : null
-
       }
     </div>
   );

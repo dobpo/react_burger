@@ -1,6 +1,5 @@
-import React from 'react';
-
 import { ConstructorElement } from '@ya.praktikum/react-developer-burger-ui-components';
+
 import Ordering from './Ordering/Ordering';
 
 import styles from './BurgerConstructor.module.scss';

@@ -3,7 +3,7 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 30%;
+  width: 35%;
   background-color: #1C1C21;
   border-radius: 40px;
 }
@@ -12,7 +12,11 @@
   display: flex;
   justify-content: flex-end;
 }
+.title {
+  margin-right: 140px;
+}
 
 .close {
-  cursor: pointer;
+  display: flex;
+  align-items: center;
 }
