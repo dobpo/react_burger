@@ -9,10 +9,10 @@ import OrderDetails from '../OrderDetails/OrderDetails';
 
 import styles from './Ordering.module.scss';
 
-const Ordering = () => {
+const Ordering = ({ price }) => {
   const [isModal, setIsModal] = useState(false);
 
-    const handleClose = () => {
+  const handleClose = () => {
     setIsModal(false);
   };
 
@@ -25,7 +25,7 @@ const Ordering = () => {
       <div className={`${styles.ordering} mt-10`}>
         <div className={`${styles.cost} mr-10`}>
           <div className="mr-1">
-            500
+            {price}
           </div>
           <CurrencyIcon type="primary" />
         </div>

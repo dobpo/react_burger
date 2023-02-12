@@ -3,20 +3,9 @@ import { useState, useEffect } from 'react';
 import AppHeader from '../AppHeader/AppHeader';
 import BurgerIngredients from '../BurgerIngredients/BurgerIngredients';
 import BurgerConstructor from '../BurgerConstructor/BurgerConstructor';
+import { getData } from '../../utilities';
 
 import styles from './App.module.scss';
-
-const DATA_API_URL = 'https://norma.nomoreparties.space/api';
-
-const getData = async () => {
-  const res = await fetch(`${DATA_API_URL}/ingredients`);
-
-  if (res.ok) {
-    return await res.json()
-  }
-  throw new Error(`Error: ${res.status}`);
-};
-
 
 function App() {
   const [data, setData] = useState([]);
