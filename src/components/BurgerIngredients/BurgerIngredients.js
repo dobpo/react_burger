@@ -1,7 +1,9 @@
-import { useState } from 'react';
+import { useState, useMemo } from 'react';
+import PropTypes from 'prop-types';
 import { Tab } from '@ya.praktikum/react-developer-burger-ui-components';
 
 import IngredientsBlock from './IngredientsBlock/IngredientsBlock';
+import { dataPropTypes } from '../../utils/propTypes';
 
 import styles from './BurgerIngredients.module.scss';
 
@@ -9,9 +11,18 @@ import styles from './BurgerIngredients.module.scss';
 const BurgerIngredients = ({ data }) => {
   const [current, setCurrent] = useState('buns')
 
-  const buns = data.filter((item) => item.type === 'bun');
-  const sauce = data.filter((item) => item.type === 'sauce');
-  const main = data.filter((item) => item.type === 'main');
+  const buns = useMemo(() =>
+    data.filter((item) => item.type === 'bun'),
+    [data]
+  );
+  const sauce = useMemo(() =>
+    data.filter((item) => item.type === 'sauce'),
+    [data]
+  );
+  const main = useMemo(() =>
+    data.filter((item) => item.type === 'main'),
+    [data]
+  );
 
   return (
     <section className={`${styles.ingridients} ml-4`}>
@@ -34,6 +45,10 @@ const BurgerIngredients = ({ data }) => {
       </div>
     </section>
   )
+};
+
+BurgerIngredients.propTypes = {
+  data: PropTypes.arrayOf(dataPropTypes.isRequired).isRequired
 };
 
 export default BurgerIngredients;

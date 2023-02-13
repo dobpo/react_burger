@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 
 import styles from './ModalOverlay.module.scss';
 const ModalOverlay = ({ handleClose }) => {
@@ -9,5 +10,9 @@ const ModalOverlay = ({ handleClose }) => {
     />
   );
 }
+
+ModalOverlay.propTypes = {
+  handleClose: PropTypes.func.isRequired
+};
 
 export default ModalOverlay;

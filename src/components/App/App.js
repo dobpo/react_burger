@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react';
 import AppHeader from '../AppHeader/AppHeader';
 import BurgerIngredients from '../BurgerIngredients/BurgerIngredients';
 import BurgerConstructor from '../BurgerConstructor/BurgerConstructor';
-import { getData } from '../../utilities';
+import { getData } from '../../utils/utilities';
 
 import styles from './App.module.scss';
 

@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import PropTypes from 'prop-types';
 import {
   Counter,
   CurrencyIcon
@@ -10,7 +11,7 @@ import IngredientDetails from './IngredientDetails/IngredientDetails'
 import styles from './IngredientsCard.module.scss';
 
 const IngredientsCard = (
-  { image, price, name, image_large, calories, proteins, fat, carbohydrates }
+  { name, image, price, image_large, calories, proteins, fat, carbohydrates }
 ) => {
   const [isModal, setIsModal] = useState(false);
 
@@ -60,6 +61,17 @@ const IngredientsCard = (
       }
     </>
   )
+};
+
+IngredientsCard.propTypes = {
+  name: PropTypes.string.isRequired,
+  image: PropTypes.string,
+  price: PropTypes.number.isRequired,
+  image_large: PropTypes.string,
+  calories: PropTypes.number.isRequired,
+  proteins: PropTypes.number.isRequired,
+  fat: PropTypes.number.isRequired,
+  carbohydrates: PropTypes.number.isRequired
 };
 
 export default IngredientsCard;

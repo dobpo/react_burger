@@ -1,6 +1,8 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import IngredientsCard from './IngredientsCard/IngredientsCard';
+import { dataPropTypes } from '../../../utils/propTypes';
 
 import styles from './IngredientsBlock.module.scss';
 
@@ -18,6 +20,11 @@ const IngredientsBlock = ({ title, ingredients }) => {
       </div>
     </div>
   )
+};
+
+IngredientsBlock.propTypes = {
+  title: PropTypes.string,
+  ingredients: PropTypes.arrayOf(dataPropTypes.isRequired).isRequired
 };
 
 export default IngredientsBlock;

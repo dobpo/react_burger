@@ -1,4 +1,4 @@
-import { DATA_API_URL } from './constants';
+import { DATA_API_URL } from '../constants';
 
 export const getData = async () => {
   const res = await fetch(`${DATA_API_URL}/ingredients`);

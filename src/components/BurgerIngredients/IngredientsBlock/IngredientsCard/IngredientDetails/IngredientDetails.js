@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types';
+
 import styles from './IngredientDetails.module.scss';
 
 const IngredientDetails = (props) => {
@@ -25,6 +27,15 @@ const IngredientDetails = (props) => {
       </div>
     </div>
   )
+};
+
+IngredientDetails.propTypes = {
+  name: PropTypes.string.isRequired,
+  image_large: PropTypes.string,
+  calories: PropTypes.number.isRequired,
+  proteins: PropTypes.number.isRequired,
+  fat: PropTypes.number.isRequired,
+  carbohydrates: PropTypes.number.isRequired
 };
 
 export default IngredientDetails;

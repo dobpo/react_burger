@@ -1,8 +1,9 @@
 import { useState } from 'react';
+import PropTypes from 'prop-types';
 import {
   CurrencyIcon,
   Button,
-} from "@ya.praktikum/react-developer-burger-ui-components";
+} from '@ya.praktikum/react-developer-burger-ui-components';
 
 import Modal from '../../Modal/Modal';
 import OrderDetails from '../OrderDetails/OrderDetails';
@@ -47,6 +48,10 @@ const Ordering = ({ price }) => {
       }
     </>
   )
+};
+
+Ordering.propTypes = {
+  price: PropTypes.number.isRequired
 };
 
 export default Ordering;
