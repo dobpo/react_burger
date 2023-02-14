@@ -1,0 +1,24 @@
+.header {
+  height: 5%;
+}
+
+.nav {
+  display: flex;
+}
+
+.col {
+  width: calc(100% / 3);
+  display: flex;
+
+  &_left {
+    justify-content: left;
+  }
+
+  &_middle {
+    justify-content: center;
+  }
+
+  &_right {
+    justify-content: right;
+  }
+}
