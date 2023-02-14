@@ -10,7 +10,7 @@ const NavItem = ({ logo, text }) => (
 )
 
 NavItem.propTypes = {
-  logo: PropTypes.object.isRequired,
+  logo: PropTypes.element.isRequired,
   text: PropTypes.string.isRequired
 };
 
